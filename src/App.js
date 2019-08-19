@@ -1,25 +1,34 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import styled, { ThemeProvider } from "styled-components";
 
-function App() {
+import Navbar from "./navbar";
+import { THEME } from "./theme";
+
+
+const Wrapper = styled.div`
+  width: 100%; 
+  height: 100%;
+  display: flex;
+`;
+
+const Page = styled.div`
+  overflow-y: auto;
+  width: 100%;
+  height: 100vh;
+  flex: 1 1 auto;
+  display: flex;
+  background: ${props => props.theme.colors.white};
+`;
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider theme={THEME}>
+      <Wrapper>
+        <Navbar />
+        <Page>
+          <p>hello page container</p>
+        </Page>
+      </Wrapper>
+    </ThemeProvider>
   );
 }
 

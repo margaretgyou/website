@@ -1,0 +1,91 @@
+
+<div id="wrapper">
+  <!-- Sidebar -->
+  <ng-container *ngIf="collapsed">
+    <div id="sidebar-wrapper">
+      <div class="animated pulse">
+        <ul class="sidebar-nav right">
+          <li class="sidebar-brand">
+            <a (click)="notemain()" class="title" style="font-size: 40px">N O T E S</a>
+            <div class="container">
+            </div>
+          </li>
+          <li class="animated pulse">
+            <a style="margin-top: 20px"(click)="comp303()">COMP 303</a>
+            <a (click)="comp307()">COMP 307</a>
+            <a (click)="comp330()">COMP 330</a>
+            <a (click)="comp417()">COMP 417</a>
+            <a (click)="angul()">Angular CLI</a>
+            <a (click)="webdev()">Web Design</a>
+            <a (click)="algor()">Algorithms</a>
+            <router-outlet></router-outlet>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </ng-container>
+  <!-- /#sidebar-wrapper -->
+
+  <!-- Page Content -->
+  <!--<div id="page-content-wrapper" [ngStyle]="{margin: getMargin()}">-->
+  <div id="page-content-wrapper">
+    <div class="container-fluid animated pulse">
+      <div class="row">
+        <div class="col-lg-12" id="h-sidebar">
+          <a (click)="comp303()">COMP 303</a><a>&nbsp;&nbsp;&nbsp;&nbsp;</a>
+          <a (click)="comp307()">COMP 307</a><a>&nbsp;&nbsp;&nbsp;&nbsp;</a>
+          <a (click)="comp330()">COMP 330</a><a>&nbsp;&nbsp;&nbsp;&nbsp;</a>
+          <a (click)="comp417()">COMP 417</a><a>&nbsp;&nbsp;&nbsp;&nbsp;</a>
+          <a (click)="angul()">Angular CLI</a><a>&nbsp;&nbsp;&nbsp;&nbsp;</a>
+          <a (click)="webdev()">Web Design</a><a>&nbsp;&nbsp;&nbsp;&nbsp;</a>
+          <a (click)="algor()">Algorithms</a>
+          <hr>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-12" id="content">
+          <div class="container">
+            <ng-container *ngIf="notesMain" class="animated pulse">
+              <h1>Notes and Study Guides</h1><hr>
+              <p>This page includes course notes and any miscellaneous notes on self-started projects/learning.
+                Feel free to use and download any of these notes.
+                All rights are also reserved to the professors and any other third-party sources that I've used to supplement my notes.
+                All resources and links will be listed in the respective subject page.
+              </p>
+              <p><code>#happylearning</code>&nbsp;&nbsp;<code>#happycoding</code></p>
+            </ng-container>
+          </div>
+          <ng-container *ngIf="c307">
+            <app-c307></app-c307>
+          </ng-container>
+          <ng-container *ngIf="c330">
+            <app-c330></app-c330>
+          </ng-container>
+          <ng-container *ngIf="c417">
+            <app-c417></app-c417>
+          </ng-container>
+          <ng-container *ngIf="c303">
+            <app-c303></app-c303>
+          </ng-container>
+          <ng-container *ngIf="ang">
+            <app-ang></app-ang>
+          </ng-container>
+          <ng-container *ngIf="alg">
+            <app-alg></app-alg>
+          </ng-container>
+          <ng-container *ngIf="web">
+            <app-web></app-web>
+          </ng-container>
+
+          <!--<button type="button" (click)="collapse(collapsed)">
+            sidebar
+          </button>-->
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- /#page-content-wrapper -->
+
+</div>
+<!-- /#wrapper -->
+

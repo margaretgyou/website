@@ -1,0 +1,33 @@
+<div class="animated fadeInUp">
+  <div class="container title ">
+    <h1>COMP 303: Software Design</h1>
+    <h3>Fall 2018  - Joseph P Vybihal and Mathieu Nassif</h3>
+    <a href="https://www.cs.mcgill.ca/~jvybihal/Courses/CS303/index.html">Course Website</a>&nbsp;&nbsp;
+    <a href="https://www.mcgill.ca/study/2018-2019/courses/comp-303">Course Info</a>
+
+    <hr><br>
+    <p>final was brutal...</p>
+    <p>description coming soon</p>
+    <div class="temp" style="text-align: center">
+      <button
+        class="btn" (click)="show303()"
+        type="button">{{buttonDisplay}}
+      </button>
+      <button *ngIf="show" class="btn" (click)="download()"> Download</button>
+    </div>
+  </div>
+  <ng-container *ngIf="show">
+    <div>
+      <p style="margin-left:45px;text-align: center">It may take 3 secs for the notes to load.</p>
+    </div>
+    <hr style="max-width: 800px">
+    <pdf-viewer [src]="pdfSrc"
+                [render-text]="true"
+                [show-all]="true"
+                style="display: block;"></pdf-viewer>
+  </ng-container>
+</div>
+
+
+
+

@@ -10,13 +10,23 @@
 
 # production
 /build
+/.idea
+.idea
+.idea/**/workspace.xml
+
 
 # misc
 .DS_Store
+**/.DS_Store
 .env.local
 .env.development.local
 .env.test.local
 .env.production.local
+.env
+/coverage
+/demo/dist
+/es
+/lib
 
 npm-debug.log*
 yarn-debug.log*

@@ -1,3 +1,5 @@
-made with react w/ react hooks & styled-components 
+https://margaretgu.com/
 
-old version: angular cli 6
+Updated website made with **react** w/ react hooks & styled-components 
+
+old version was made with **angular cli 6**

@@ -21,6 +21,7 @@
 .env.production.local
 .firebaserc
 firebase.json
+yarn.lock
 
 npm-debug.log*
 yarn-debug.log*
